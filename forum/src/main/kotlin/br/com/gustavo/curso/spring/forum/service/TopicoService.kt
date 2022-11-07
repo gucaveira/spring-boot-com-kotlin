@@ -35,7 +35,19 @@ class TopicoService(private var topicos: List<Topico>) {
 
         topicos = listOf(topico, topico2, topico3)
     }
+
     fun listar(): List<Topico> {
         return topicos
+    }
+
+    fun buscarPorId(id: Long): Topico {
+
+      /*  topicos.find {
+            it.id == id
+        }*/
+
+        return topicos.stream().filter {
+            it.id == id
+        }.findFirst().get()
     }
 }
