@@ -5,8 +5,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1633f742-9f14-471f-9e77-1388ef6b4674" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/forum/src/main/kotlin/br/com/gustavo/curso/spring/forum/dto/AtualizacaoTopicoForm.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/forum/src/main/kotlin/br/com/gustavo/curso/spring/forum/controller/TopicoController.kt" beforeDir="false" afterPath="$PROJECT_DIR$/forum/src/main/kotlin/br/com/gustavo/curso/spring/forum/controller/TopicoController.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/forum/src/main/kotlin/br/com/gustavo/curso/spring/forum/service/TopicoService.kt" beforeDir="false" afterPath="$PROJECT_DIR$/forum/src/main/kotlin/br/com/gustavo/curso/spring/forum/service/TopicoService.kt" afterDir="false" />
     </list>
@@ -119,7 +117,14 @@
       <option name="project" value="LOCAL" />
       <updated>1667944224135</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Atualizando um topico">
+      <created>1667945226319</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1667945226319</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -144,6 +149,7 @@
     <MESSAGE value="criando classe que DTO de view e de form" />
     <MESSAGE value="criando classes mappers" />
     <MESSAGE value="Validação com Bean Validation" />
-    <option name="LAST_COMMIT_MESSAGE" value="Validação com Bean Validation" />
+    <MESSAGE value="Atualizando um topico" />
+    <option name="LAST_COMMIT_MESSAGE" value="Atualizando um topico" />
   </component>
 </project>
