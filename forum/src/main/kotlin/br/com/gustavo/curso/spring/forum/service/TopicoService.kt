@@ -1,53 +1,57 @@
 package br.com.gustavo.curso.spring.forum.service
 
-import br.com.gustavo.curso.spring.forum.model.Curso
+import br.com.gustavo.curso.spring.forum.dto.NovoTopicoForm
+import br.com.gustavo.curso.spring.forum.dto.TopicoView
 import br.com.gustavo.curso.spring.forum.model.Topico
-import br.com.gustavo.curso.spring.forum.model.Usuario
 import org.springframework.stereotype.Service
 
 @Service
-class TopicoService(private var topicos: List<Topico>) {
+class TopicoService(
+    private var topicos: List<Topico> = listOf(),
+    private val cursoService: CursoService,
+    private val usuarioService: UsuarioService
+) {
 
-    init {
-        val topico = Topico(
-            id = 1,
-            titulo = "Duvida kotlin",
-            mensagem = "Variaveis no kotlin",
-            curso = Curso(id = 1, nome = "Kotlin basico", "programação"),
-            autor = Usuario(1, "Gustavo", "gustavo@gmail.com")
-        )
-
-        val topico2 = Topico(
-            id = 2,
-            titulo = "Duvida kotlin 2",
-            mensagem = "Variaveis no kotlin 2",
-            curso = Curso(id = 1, nome = "Kotlin basico", "programação"),
-            autor = Usuario(1, "Gustavo", "gustavo@gmail.com")
-        )
-
-        val topico3 = Topico(
-            id = 3,
-            titulo = "Duvida kotlin 3",
-            mensagem = "Variaveis no kotlin 3",
-            curso = Curso(id = 1, nome = "Kotlin basico", "programação"),
-            autor = Usuario(1, "Gustavo", "gustavo@gmail.com")
-        )
-
-        topicos = listOf(topico, topico2, topico3)
+    fun listar(): List<TopicoView> {
+        return topicos.map {
+            TopicoView(
+                id = it.id,
+                titulo = it.titulo,
+                mensagem = it.mensagem,
+                status = it.status,
+                dataCriacao = it.dataCriacao
+            )
+        }
     }
 
-    fun listar(): List<Topico> {
-        return topicos
-    }
+    fun buscarPorId(id: Long): TopicoView {
 
-    fun buscarPorId(id: Long): Topico {
+        /*  topicos.find {
+              it.id == id
+          }*/
 
-      /*  topicos.find {
-            it.id == id
-        }*/
-
-        return topicos.stream().filter {
+        val topico = topicos.stream().filter {
             it.id == id
         }.findFirst().get()
+
+        return TopicoView(
+            id = topico.id,
+            titulo = topico.titulo,
+            mensagem = topico.mensagem,
+            status = topico.status,
+            dataCriacao = topico.dataCriacao
+        )
+    }
+
+    fun cadastrar(topicoDto: NovoTopicoForm) {
+        topicos = topicos.plus(
+            Topico(
+                id = topicos.size.toLong() + 1,
+                titulo = topicoDto.titulo,
+                mensagem = topicoDto.mensagem,
+                curso = cursoService.buscarPorId(topicoDto.idCurso),
+                autor = usuarioService.buscarPorId(topicoDto.idAutor)
+            )
+        )
     }
 }
