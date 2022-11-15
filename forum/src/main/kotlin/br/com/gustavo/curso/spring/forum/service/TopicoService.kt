@@ -6,13 +6,15 @@ import br.com.gustavo.curso.spring.forum.dto.TopicoView
 import br.com.gustavo.curso.spring.forum.mapper.TopicoFormMapper
 import br.com.gustavo.curso.spring.forum.mapper.TopicoViewMapper
 import br.com.gustavo.curso.spring.forum.model.Topico
+import br.com.gustavo.curso.spring.forum.exception.NotFoundException
 import org.springframework.stereotype.Service
 
 @Service
 class TopicoService(
     private var topicos: List<Topico> = listOf(),
     private val topicoViewMapper: TopicoViewMapper,
-    private val topicoFormMapper: TopicoFormMapper
+    private val topicoFormMapper: TopicoFormMapper,
+    private val notFoundMessage: String = "Topico não encontrado!"
 ) {
 
     fun listar(): List<TopicoView> {
@@ -29,7 +31,7 @@ class TopicoService(
 
         val topico = topicos.stream().filter {
             it.id == id
-        }.findFirst().get()
+        }.findFirst().orElseThrow { NotFoundException(notFoundMessage) }
 
         return topicoViewMapper.map(topico)
     }
@@ -45,7 +47,7 @@ class TopicoService(
     fun atulizar(form: AtualizacaoTopicoForm): TopicoView {
         val topico = topicos.stream().filter {
             it.id == form.id
-        }.findFirst().get()
+        }.findFirst().orElseThrow { NotFoundException(notFoundMessage) }
 
         val topicoAtualizado = Topico(
             id = form.id,
@@ -66,7 +68,7 @@ class TopicoService(
     fun deletar(id: Long) {
         val topico = topicos.stream().filter {
             it.id == id
-        }.findFirst().get()
+        }.findFirst().orElseThrow { NotFoundException(notFoundMessage) }
 
         topicos = topicos.minus(topico)
     }
