@@ -4,11 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1633f742-9f14-471f-9e77-1388ef6b4674" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/forum/src/main/kotlin/br/com/gustavo/curso/spring/forum/model/Curso.kt" beforeDir="false" afterPath="$PROJECT_DIR$/forum/src/main/kotlin/br/com/gustavo/curso/spring/forum/model/Curso.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/forum/src/main/kotlin/br/com/gustavo/curso/spring/forum/model/Resposta.kt" beforeDir="false" afterPath="$PROJECT_DIR$/forum/src/main/kotlin/br/com/gustavo/curso/spring/forum/model/Resposta.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/forum/src/main/kotlin/br/com/gustavo/curso/spring/forum/model/Topico.kt" beforeDir="false" afterPath="$PROJECT_DIR$/forum/src/main/kotlin/br/com/gustavo/curso/spring/forum/model/Topico.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/forum/src/main/kotlin/br/com/gustavo/curso/spring/forum/model/Usuario.kt" beforeDir="false" afterPath="$PROJECT_DIR$/forum/src/main/kotlin/br/com/gustavo/curso/spring/forum/model/Usuario.kt" afterDir="false" />
+    <list default="true" id="1633f742-9f14-471f-9e77-1388ef6b4674" name="Changes" comment="corrigindo bug da falta de @Entity">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/forum/src/main/kotlin/br/com/gustavo/curso/spring/forum/repositozry/CursoRepository.kt" beforeDir="false" afterPath="$PROJECT_DIR$/forum/src/main/kotlin/br/com/gustavo/curso/spring/forum/repositozry/CursoRepository.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/forum/src/main/kotlin/br/com/gustavo/curso/spring/forum/repositozry/UsuarioRepository.kt" beforeDir="false" afterPath="$PROJECT_DIR$/forum/src/main/kotlin/br/com/gustavo/curso/spring/forum/repositozry/UsuarioRepository.kt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -52,17 +51,17 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "last_opened_file_path": "G:/IdeaProjects/curso alura em andamento/spring boot com kotlin",
-    "project.structure.last.edited": "Project",
-    "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.2",
-    "settings.editor.selected.configurable": "vcs.Git"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;G:/IdeaProjects/curso alura em andamento/spring boot com kotlin&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;vcs.Git&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CreateKotlinClassDialog.RecentsKey">
       <recent name="br.com.gustavo.curso.spring.forum.dto" />
@@ -180,7 +179,14 @@
       <option name="project" value="LOCAL" />
       <updated>1673892668641</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="corrigindo bug da falta de @Entity">
+      <created>1673964131828</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1673964131828</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -213,6 +219,7 @@
     <MESSAGE value="Handle para Validation Error" />
     <MESSAGE value="add depencia h2- banco de dados em memoria, e libs jpa" />
     <MESSAGE value="configuracao para o banco de dados" />
-    <option name="LAST_COMMIT_MESSAGE" value="configuracao para o banco de dados" />
+    <MESSAGE value="corrigindo bug da falta de @Entity" />
+    <option name="LAST_COMMIT_MESSAGE" value="corrigindo bug da falta de @Entity" />
   </component>
 </project>
