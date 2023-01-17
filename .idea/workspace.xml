@@ -4,10 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1633f742-9f14-471f-9e77-1388ef6b4674" name="Changes" comment="corrigindo bug da falta de @Entity">
+    <list default="true" id="1633f742-9f14-471f-9e77-1388ef6b4674" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/forum/src/main/resources/data.sql" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/forum/src/main/kotlin/br/com/gustavo/curso/spring/forum/repositozry/CursoRepository.kt" beforeDir="false" afterPath="$PROJECT_DIR$/forum/src/main/kotlin/br/com/gustavo/curso/spring/forum/repositozry/CursoRepository.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/forum/src/main/kotlin/br/com/gustavo/curso/spring/forum/repositozry/UsuarioRepository.kt" beforeDir="false" afterPath="$PROJECT_DIR$/forum/src/main/kotlin/br/com/gustavo/curso/spring/forum/repositozry/UsuarioRepository.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/forum/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/forum/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/forum/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/forum/src/main/resources/application.yml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -186,7 +187,14 @@
       <option name="project" value="LOCAL" />
       <updated>1673964131828</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="corrigindo erro de configuracao do arquivo de persistencia">
+      <created>1673964808208</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1673964808208</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -220,6 +228,7 @@
     <MESSAGE value="add depencia h2- banco de dados em memoria, e libs jpa" />
     <MESSAGE value="configuracao para o banco de dados" />
     <MESSAGE value="corrigindo bug da falta de @Entity" />
-    <option name="LAST_COMMIT_MESSAGE" value="corrigindo bug da falta de @Entity" />
+    <MESSAGE value="corrigindo erro de configuracao do arquivo de persistencia" />
+    <option name="LAST_COMMIT_MESSAGE" value="corrigindo erro de configuracao do arquivo de persistencia" />
   </component>
 </project>
