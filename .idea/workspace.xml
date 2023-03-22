@@ -5,7 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1633f742-9f14-471f-9e77-1388ef6b4674" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/forum/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/forum/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/forum/src/main/kotlin/br/com/gustavo/curso/spring/forum/ForumApplication.kt" beforeDir="false" afterPath="$PROJECT_DIR$/forum/src/main/kotlin/br/com/gustavo/curso/spring/forum/ForumApplication.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/forum/src/main/kotlin/br/com/gustavo/curso/spring/forum/controller/TopicoController.kt" beforeDir="false" afterPath="$PROJECT_DIR$/forum/src/main/kotlin/br/com/gustavo/curso/spring/forum/controller/TopicoController.kt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
