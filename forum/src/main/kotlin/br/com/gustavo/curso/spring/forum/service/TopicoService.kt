@@ -9,6 +9,7 @@ import br.com.gustavo.curso.spring.forum.mapper.TopicoFormMapper
 import br.com.gustavo.curso.spring.forum.mapper.TopicoViewMapper
 import br.com.gustavo.curso.spring.forum.repositozry.TopicoRepository
 import java.util.stream.Collectors
+import javax.persistence.EntityManager
 import org.springframework.data.domain.Page
 import org.springframework.data.domain.Pageable
 import org.springframework.stereotype.Service
@@ -18,13 +19,15 @@ class TopicoService(
     private val repository: TopicoRepository,
     private val topicoViewMapper: TopicoViewMapper,
     private val topicoFormMapper: TopicoFormMapper,
-    private val notFoundMessage: String = "Topico não encontrado!"
+    private val notFoundMessage: String = "Topico não encontrado!",
+    private val entityManager: EntityManager
 ) {
 
     fun listar(
         nomeCurso: String?,
         paginacao: Pageable
     ): Page<TopicoView> {
+        println(entityManager)
         val topicos = if (nomeCurso == null) {
             repository.findAll(paginacao)
         } else {

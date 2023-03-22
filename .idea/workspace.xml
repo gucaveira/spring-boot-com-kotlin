@@ -5,7 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1633f742-9f14-471f-9e77-1388ef6b4674" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/forum/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/forum/src/main/resources/application.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/forum/src/main/kotlin/br/com/gustavo/curso/spring/forum/dto/TopicoPorCategoriaDto.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/forum/src/main/kotlin/br/com/gustavo/curso/spring/forum/controller/TopicoController.kt" beforeDir="false" afterPath="$PROJECT_DIR$/forum/src/main/kotlin/br/com/gustavo/curso/spring/forum/controller/TopicoController.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/forum/src/main/kotlin/br/com/gustavo/curso/spring/forum/repositozry/TopicoRepository.kt" beforeDir="false" afterPath="$PROJECT_DIR$/forum/src/main/kotlin/br/com/gustavo/curso/spring/forum/repositozry/TopicoRepository.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/forum/src/main/kotlin/br/com/gustavo/curso/spring/forum/service/TopicoService.kt" beforeDir="false" afterPath="$PROJECT_DIR$/forum/src/main/kotlin/br/com/gustavo/curso/spring/forum/service/TopicoService.kt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -236,7 +239,14 @@
       <option name="project" value="LOCAL" />
       <updated>1679508364427</updated>
     </task>
-    <option name="localTasksCounter" value="21" />
+    <task id="LOCAL-00021" summary="habilitando a visualizacao do banco h2 via navegador">
+      <created>1679508971164</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1679508971164</updated>
+    </task>
+    <option name="localTasksCounter" value="22" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -277,6 +287,7 @@
     <MESSAGE value="buscando topico pelo nome do curso" />
     <MESSAGE value="add paginacao de listagem de topico" />
     <MESSAGE value="add ferramenta de cache do spring" />
-    <option name="LAST_COMMIT_MESSAGE" value="add ferramenta de cache do spring" />
+    <MESSAGE value="habilitando a visualizacao do banco h2 via navegador" />
+    <option name="LAST_COMMIT_MESSAGE" value="habilitando a visualizacao do banco h2 via navegador" />
   </component>
 </project>
