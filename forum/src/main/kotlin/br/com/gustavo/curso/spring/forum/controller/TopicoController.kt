@@ -2,6 +2,7 @@ package br.com.gustavo.curso.spring.forum.controller
 
 import br.com.gustavo.curso.spring.forum.dto.AtualizacaoTopicoForm
 import br.com.gustavo.curso.spring.forum.dto.NovoTopicoForm
+import br.com.gustavo.curso.spring.forum.dto.TopicoPorCategoriaDto
 import br.com.gustavo.curso.spring.forum.dto.TopicoView
 import br.com.gustavo.curso.spring.forum.service.TopicoService
 import javax.validation.Valid
@@ -78,4 +79,10 @@ class TopicoController(private val service: TopicoService) {
     fun deletar(@PathVariable id: Long) {
         service.deletar(id)
     }
+
+    @GetMapping("/relatorio")
+    fun relatorio(): List<TopicoPorCategoriaDto> {
+        return service.relatorio()
+    }
+
 }

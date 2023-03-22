@@ -2,6 +2,7 @@ package br.com.gustavo.curso.spring.forum.service
 
 import br.com.gustavo.curso.spring.forum.dto.AtualizacaoTopicoForm
 import br.com.gustavo.curso.spring.forum.dto.NovoTopicoForm
+import br.com.gustavo.curso.spring.forum.dto.TopicoPorCategoriaDto
 import br.com.gustavo.curso.spring.forum.dto.TopicoView
 import br.com.gustavo.curso.spring.forum.exception.NotFoundException
 import br.com.gustavo.curso.spring.forum.mapper.TopicoFormMapper
@@ -64,5 +65,9 @@ class TopicoService(
 
     fun deletar(id: Long) {
         val topico = repository.deleteById(id)
+    }
+
+    fun relatorio(): List<TopicoPorCategoriaDto> {
+        return repository.relatorio()
     }
 }
