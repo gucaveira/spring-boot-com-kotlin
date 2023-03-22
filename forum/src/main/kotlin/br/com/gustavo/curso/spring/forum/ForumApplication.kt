@@ -4,6 +4,9 @@ import org.springframework.boot.autoconfigure.SpringBootApplication
 import org.springframework.boot.runApplication
 import org.springframework.cache.annotation.EnableCaching
 
+//http://localhost:8080/h2-console
+// essa rota para ver o banco h2
+
 @SpringBootApplication
 @EnableCaching
 class ForumApplication
