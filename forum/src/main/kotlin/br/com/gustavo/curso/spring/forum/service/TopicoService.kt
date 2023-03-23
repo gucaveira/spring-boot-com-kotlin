@@ -8,7 +8,6 @@ import br.com.gustavo.curso.spring.forum.exception.NotFoundException
 import br.com.gustavo.curso.spring.forum.mapper.TopicoFormMapper
 import br.com.gustavo.curso.spring.forum.mapper.TopicoViewMapper
 import br.com.gustavo.curso.spring.forum.repositozry.TopicoRepository
-import java.util.stream.Collectors
 import javax.persistence.EntityManager
 import org.springframework.data.domain.Page
 import org.springframework.data.domain.Pageable
@@ -56,7 +55,7 @@ class TopicoService(
         return topicoViewMapper.map(topico)
     }
 
-    fun atulizar(form: AtualizacaoTopicoForm): TopicoView {
+    fun atualizar(form: AtualizacaoTopicoForm): TopicoView {
         val topico = repository.findById(form.id)
             .orElseThrow { NotFoundException(notFoundMessage) }
 
@@ -67,7 +66,7 @@ class TopicoService(
     }
 
     fun deletar(id: Long) {
-        val topico = repository.deleteById(id)
+       repository.deleteById(id)
     }
 
     fun relatorio(): List<TopicoPorCategoriaDto> {

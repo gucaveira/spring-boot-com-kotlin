@@ -13,9 +13,9 @@ interface TopicoRepository : JpaRepository<Topico, Long> {
     // uma queue de SQL, usando as palavras da função
     fun findByCursoNome(nomeCurso: String, paginacao: Pageable): Page<Topico>
 
-    @Query("SELECT new br.com.alura.forum.dto.TopicoPorCategoria(curso.categoria, count(t)) " +
+    @Query("SELECT new br.com.gustavo.curso.spring.forum.dto.TopicoPorCategoriaDto(curso.categoria, count(t)) " +
             "FROM Topico t " +
-            "Topico JOIN t.curso " +
-            "curso GRUOP BY curso.categoria")
+            " JOIN t.curso " +
+            "curso GROUP BY curso.categoria")
     fun relatorio(): List<TopicoPorCategoriaDto>
 }

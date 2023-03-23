@@ -68,7 +68,7 @@ class TopicoController(private val service: TopicoService) {
     fun atualizar(
         @RequestBody @Valid form: AtualizacaoTopicoForm,
     ): ResponseEntity<TopicoView> {
-        val topicoView = service.atulizar(form)
+        val topicoView = service.atualizar(form)
         return ResponseEntity.ok(topicoView)
     }
 
