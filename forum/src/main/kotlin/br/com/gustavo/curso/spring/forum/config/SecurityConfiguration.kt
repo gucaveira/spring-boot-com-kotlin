@@ -20,7 +20,11 @@ class SecurityConfiguration(private val userDetailsService: UserDetailsService) 
     }
 
     override fun configure(http: HttpSecurity?) {
-        http?.authorizeRequests()?.anyRequest()?.authenticated()?.and()?.sessionManagement()
+        http?.authorizeRequests()
+            ?.antMatchers("/topicos")
+            ?.hasAnyAuthority("LEITURA_ESCRITA")
+            ?.anyRequest()
+            ?.authenticated()?.and()?.sessionManagement()
             ?.sessionCreationPolicy(SessionCreationPolicy.STATELESS)
             ?.and()?.formLogin()?.disable()?.httpBasic()
     }

@@ -5,19 +5,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1633f742-9f14-471f-9e77-1388ef6b4674" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/forum/src/main/kotlin/br/com/gustavo/curso/spring/forum/config/SecurityConfiguration.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/forum/src/main/kotlin/br/com/gustavo/curso/spring/forum/service/UserDetail.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/forum/src/main/resources/db/migration/V5__alter_table_usuario_add_password.sql" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/forum/src/main/resources/db/migration/V6__inser_password_user.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_security_2_7_5.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_security_spring_security_config_5_7_4.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_security_spring_security_core_5_7_4.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_security_spring_security_crypto_5_7_4.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_security_spring_security_web_5_7_4.xml" beforeDir="false" />
+      <change afterPath="$PROJECT_DIR$/forum/src/main/kotlin/br/com/gustavo/curso/spring/forum/model/Role.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/forum/src/main/resources/db/migration/V7__create_table_role.sql" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/forum/src/main/resources/db/migration/V8__create_table_usuario_role.sql" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/forum/src/main/kotlin/br/com/gustavo/curso/spring/forum/config/SecurityConfiguration.kt" beforeDir="false" afterPath="$PROJECT_DIR$/forum/src/main/kotlin/br/com/gustavo/curso/spring/forum/config/SecurityConfiguration.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/forum/src/main/kotlin/br/com/gustavo/curso/spring/forum/model/Usuario.kt" beforeDir="false" afterPath="$PROJECT_DIR$/forum/src/main/kotlin/br/com/gustavo/curso/spring/forum/model/Usuario.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/forum/src/main/kotlin/br/com/gustavo/curso/spring/forum/repositozry/UsuarioRepository.kt" beforeDir="false" afterPath="$PROJECT_DIR$/forum/src/main/kotlin/br/com/gustavo/curso/spring/forum/repositozry/UsuarioRepository.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/forum/src/main/kotlin/br/com/gustavo/curso/spring/forum/service/UsuarioService.kt" beforeDir="false" afterPath="$PROJECT_DIR$/forum/src/main/kotlin/br/com/gustavo/curso/spring/forum/service/UsuarioService.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/forum/src/main/kotlin/br/com/gustavo/curso/spring/forum/service/UserDetail.kt" beforeDir="false" afterPath="$PROJECT_DIR$/forum/src/main/kotlin/br/com/gustavo/curso/spring/forum/service/UserDetail.kt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -61,17 +55,17 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "last_opened_file_path": "G:/Users/gusta/IdeaProjects/spring-boot-com-kotlin/forum/src/main/resources/db/migration",
-    "project.structure.last.edited": "Project",
-    "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.2",
-    "settings.editor.selected.configurable": "vcs.Git"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;G:/Users/gusta/IdeaProjects/spring-boot-com-kotlin/forum/src/main/resources/db/migration&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;vcs.Git&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="G:\Users\gusta\IdeaProjects\spring-boot-com-kotlin\forum\src\main\resources\db\migration" />
@@ -278,7 +272,14 @@
       <option name="project" value="LOCAL" />
       <updated>1679609377415</updated>
     </task>
-    <option name="localTasksCounter" value="25" />
+    <task id="LOCAL-00025" summary="configurando UserDetailsService e aplicando um exemplo">
+      <created>1679612557206</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1679612557207</updated>
+    </task>
+    <option name="localTasksCounter" value="26" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -323,6 +324,7 @@
     <MESSAGE value="implementando uma select com nome proprio" />
     <MESSAGE value="acessando o EntityManager" />
     <MESSAGE value="add spring-boot-starter-security" />
-    <option name="LAST_COMMIT_MESSAGE" value="add spring-boot-starter-security" />
+    <MESSAGE value="configurando UserDetailsService e aplicando um exemplo" />
+    <option name="LAST_COMMIT_MESSAGE" value="configurando UserDetailsService e aplicando um exemplo" />
   </component>
 </project>

@@ -4,7 +4,7 @@ import br.com.gustavo.curso.spring.forum.model.Usuario
 import org.springframework.security.core.userdetails.UserDetails
 
 class UserDetail(private val usuario: Usuario) : UserDetails {
-    override fun getAuthorities() = null
+    override fun getAuthorities() = usuario.role
 
     override fun getPassword(): String = usuario.password
 
